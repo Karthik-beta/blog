@@ -41,8 +41,8 @@
   }
 }
 
-body {
-  min-height: 100vh;
+/* body {
+  min-height: 100dvh;
   background: var(--bg);
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -53,6 +53,32 @@ body {
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
+
+  Hack
+  overflow-x: hidden;
+} */
+
+body {
+  min-height: 100dvh;
+  background: var(--bg); /* Assuming --bg is defined elsewhere */
+  color: var(--fg);     /* Assuming --fg is defined elsewhere */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /* --- START Star Pattern (Revised SVG Data URL) --- */
+  /* Define the star shape in an SVG pattern */
+  /* Ensure xmlns is present, remove width/height on root svg, check encoding */
+  background-image:
+    /* First layer */
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><pattern id="star-pattern" patternUnits="userSpaceOnUse" width="50" height="50"><polygon points="25,22 26,24 28,25 26,26 25,28 24,26 22,25 24,24" fill="%23ddd"/></pattern><rect width="100%" height="100%" fill="url(%23star-pattern)"/></svg>'),
+    /* Second layer */
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><pattern id="star-pattern" patternUnits="userSpaceOnUse" width="50" height="50"><polygon points="25,22 26,24 28,25 26,26 25,28 24,26 22,25 24,24" fill="%23ddd"/></pattern><rect width="100%" height="100%" fill="url(%23star-pattern)"/></svg>');
+
+  /* Use the same positioning and size */
+  background-position: 0 0, 25px 25px; /* Offset the second layer */
+  background-attachment: fixed; /* Keep the pattern fixed */
+  background-size: 50px 50px;   /* Size of the pattern tile */
+  /* --- END Star Pattern --- */
 
   /* Hack */
   overflow-x: hidden;
