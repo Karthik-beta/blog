@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /studio/
+Allow: /
+
+Sitemap: https://blog.pivotr.in/sitemap.xml
