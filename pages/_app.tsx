@@ -3,6 +3,14 @@ import '../tailwind.css'
 import { VisualEditing } from '@sanity/visual-editing/next-pages-router'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap', // Ensures text is displayed with fallback fonts while loading
+});
 
 export interface SharedPageProps {
   draftMode: boolean
