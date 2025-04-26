@@ -14,7 +14,7 @@ export default function PostPreview({
 }: Omit<Post, '_id'>) {
   return (
     <div>
-      <div className="mb-5">
+      <div className="mb-5 hover:shadow-lg transition-shadow">
         <CoverImage
           slug={slug}
           title={title}

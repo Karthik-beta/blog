@@ -59,5 +59,8 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "trustedDependencies": [
+    "unrs-resolver"
+  ]
 }
