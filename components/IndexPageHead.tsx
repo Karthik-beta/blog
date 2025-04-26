@@ -23,7 +23,7 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
       <meta
         key="description"
         name="description"
-        content={toPlainText(description)}
+        content={toPlainText(description) || 'Pivotr Blog - Stay updated with the latest insights, stories, and updates on technology, business, and innovation.'}
       />
       <meta
         property="og:image"

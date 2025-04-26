@@ -8,13 +8,15 @@
     "lint": "next lint . --ignore-path .gitignore",
     "lint:fix": "npm run format && npm run lint -- --fix",
     "start": "next start",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true bun run build"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.3.1",
     "@sanity/client": "6.29.0",
     "@sanity/icons": "3.7.0",
     "@sanity/image-url": "1.1.0",
